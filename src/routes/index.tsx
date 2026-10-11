@@ -3,6 +3,8 @@ import { LinkCard } from "@/components/LinkCard";
 import boss from "@/assets/boss.jpg.asset.json";
 import money from "@/assets/money.jpg.asset.json";
 import eyes from "@/assets/eyes.jpg";
+import subway from "@/assets/subway-surfers.jpg.asset.json";
+import livepix from "@/assets/livepix.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,10 +21,7 @@ export const Route = createFileRoute("/")({
 });
 
 const SubwayIcon = (
-  <svg viewBox="0 0 48 48" className="h-12 w-12" aria-hidden>
-    <rect width="48" height="48" rx="10" fill="#F7C600" />
-    <text x="24" y="31" textAnchor="middle" fontSize="16" fontWeight="900" fill="#1E5BD8" fontFamily="Arial Black, sans-serif">SS</text>
-  </svg>
+  <img src={subway.url} alt="Subway Surfers" width={628} height={628} className="h-full w-full object-cover" />
 );
 const DiscordIcon = (
   <svg viewBox="0 0 48 48" className="h-12 w-12" aria-hidden>
@@ -31,11 +30,7 @@ const DiscordIcon = (
   </svg>
 );
 const LivePixIcon = (
-  <svg viewBox="0 0 48 48" className="h-12 w-12" aria-hidden>
-    <rect width="48" height="48" rx="10" fill="#FF3C5F" />
-    <path fill="#fff" d="M24 11 37 24 24 37 11 24Z" opacity=".25" />
-    <text x="24" y="30" textAnchor="middle" fontSize="15" fontWeight="900" fill="#fff" fontFamily="Arial Black, sans-serif">LP</text>
-  </svg>
+  <img src={livepix.url} alt="LivePix" width={758} height={758} className="h-full w-full object-contain" />
 );
 
 const particles = Array.from({ length: 16 }, (_, i) => ({
